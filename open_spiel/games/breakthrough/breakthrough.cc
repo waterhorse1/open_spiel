@@ -30,7 +30,7 @@ namespace {
 constexpr int kNumDirections = 6;
 
 // Numbers of rows needed to have 2 full rows of pieces.
-constexpr int kNumRowsForFullPieces = 6;
+constexpr int kNumRowsForFullPieces = 5;
 
 // Direction offsets for black, then white.
 constexpr std::array<int, kNumDirections> kDirRowOffsets = {
