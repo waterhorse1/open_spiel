@@ -98,6 +98,11 @@ class BreakthroughGame : public Game {
     return std::unique_ptr<State>(
         new BreakthroughState(shared_from_this(), rows_, cols_));
   }
+  std::unique_ptr<State> NewInitialState(const std::string& str)
+      const override {
+    return DeserializeState(str);
+  }
+
   int NumPlayers() const override { return kNumPlayers; }
   double MinUtility() const override { return -1; }
   absl::optional<double> UtilitySum() const override { return 0; }
